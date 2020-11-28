@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 0;
+            background-color: powderblue;
+            display: flex;
+            height: 200px;
+        }
+
+        .item {
+            border: 1px solid white;
+            background-color: red;
+            color: white;
+            /* flex-grow:0; */
+        }
+        .item:nth-child(2){
+            /* flex-grow:5; */
+            /* flex-basis: 200px; */
+        }
+
+        h1 {
+            -webkit-filter: blur(0.7 ) ;
+            filter: blur(0.7px);
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    <h1>이미지꾸미기
+
+    </h1>
+</body>
+</html>
