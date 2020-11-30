@@ -38,7 +38,7 @@
 
 1. 자바 Enterprise 다운로드 받기
    - workspace 박원기강사님 전용 따로 만들기
-2. jquery 사이트 접솝 https://jquery.com/download/
+2. jquery 사이트 접속 https://jquery.com/download/
 3. 스크롤 내리다보면 linkUsing jQuery with a CDN에서 https://code.jquery.com 접속
    - CDN 라이브러리는 uncompressed, minified 둘중에 하나 쓰자 
 4. 다시 위로 가서 Download the compressed, production jQuery 3.5.1 오른쪽 클릭-> 다른이름으로 링크저장-> 파일 따로 적당한곳에 저장
