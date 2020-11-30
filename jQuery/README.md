@@ -19,7 +19,7 @@
 
 # 1. jQuery
 
-1. html + CSS + javascript를 통홥ㅈ한 하나의 라이브러리
+1. html + CSS + javascript를 통합한 하나의 라이브러리
 2. 굉장히 쉬운 접근방법을제공한다. --> 전체 처리 속도 감소.
 3. 모든 javascript 문법은 그대로 사용 가능.
 4. 대소문자 구별,
