@@ -27,6 +27,8 @@
 6. 라이브러리를 사용하는 방법
   - CDN
   - 라이브러리를 해당 프로젝트내에 복사해서 사용.
+    - 1. 분석해서 하고 싶은 개발자는 uncompressed 다운
+    - 2. 속도 빠르고 싶은사람은?? compressed
 7. jQuery는 모든것이 함수화되어 있기 때문에 함수에 대한 이해가 좋을수록 jQuery의 이해도가 높아질 수 있다.
   - ex) id = 'abc' 인 요소를 선택
     - javascript: var id = document.getElementById('abc');
@@ -85,7 +87,7 @@
     - 선언문
     
 5. `<%=  %>`
-    - 표현식
+    - 표현식(out.print 역할을 한다. (브러우저에 출력해 달라))
 
 # 6. CDN 방식으로 jQuery 라이브러리 가져오기
 
