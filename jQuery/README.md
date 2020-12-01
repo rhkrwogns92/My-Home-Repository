@@ -301,7 +301,23 @@ $('#index>#footer').css({
 </html>
 ```
 
-# 13. filter 기능 익히기(선택된 요소 중 필요한 요소만을 걸려내는 방법)
+# 13. filter 
+
+- 선택된 요소중 필요한 요소만을 걸려내는 방법
+- 접두문자 ':' 을 사용한다
+- 필터와 필터를 연결하여 사용할 수 있다
+
+# 13.1. filter 종류
+
+- :eq(index)
+- :even(짝수)
+- :odd(홀수)
+- :first(처음)
+- :last(마지막)
+- :gt(index)
+- :lt(index)
+
+# 13.2 filter 기능 익히기(선택된 요소 중 필요한 요소만을 걸려내는 방법)
 
 - WebContent -> jquery 폴더 생성 -> filter.jsp 파일 만들기
 
