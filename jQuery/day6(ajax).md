@@ -2,7 +2,16 @@
 
 - [목차](#목차)
 - [1. Ajax](#1-ajax)
-
+- [2. Ajax를 통해 전체 페이지가 새로고침되게 하지 않으려면,](#2-ajax를-통해-전체-페이지가-새로고침되게-하지-않으려면)
+- [2.1. 서버에서 처리할 내용을 UI에서 분리](#21-서버에서-처리할-내용을-ui에서-분리)
+- [2.2. 서버는 처리된 내용을 화면에 출력하는 로직을 추가한다.](#22-서버는-처리된-내용을-화면에-출력하는-로직을-추가한다)
+- [2.3. UI단에서는 XMLHttpRequest 객체를 사용하여 서버의 처리 결과를 가져온다.](#23-ui단에서는-xmlhttprequest-객체를-사용하여-서버의-처리-결과를-가져온다)
+- [3. Ajax 응용](#3-ajax-응용)
+  - [3.0. Application.java 파일 (control)](#30-applicationjava-파일-control)
+  - [3.1. EmpVo.java 파일 (control)](#31-empvojava-파일-control)
+  - [3.2. EmpDao.java 파일 (control)](#32-empdaojava-파일-control)
+  - [3.3. emp_search_form.jsp 파일 (UI)](#33-emp_search_formjsp-파일-ui)
+  - [3.4. emp_search.jsp 파일 (UI + Control)](#34-emp_searchjsp-파일-ui--control)
 
 # 1. Ajax
 
