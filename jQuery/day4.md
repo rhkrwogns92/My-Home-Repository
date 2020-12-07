@@ -192,7 +192,20 @@ $('#btnAni').on('click',function(){
 - Selectable
 - Sortable
 
+- 사용하려면 라이브러리가 필요하다.
+- jQuery CDN 라이브러리로 들어간다 -> jQuery UI로 들어간다 -> Themes 항목에서 쓸 테마주소 복사해 `<link>`에 붙인다. -> `<script>`로도 만든다
+
+ex) 
+```html
+<link rel='stylesheet' type='text/css'
+	  href='https://code.jquery.com/ui/1.12.1/themes/trontastic/jquery-ui.css'/>
+<script src='https://code.jquery.com/ui/1.12.1/jquery-ui.js'></script>
+```
+
 # 3.1. Tab Widget(tabs)
+
+- `tabs()` 함수를 사용한다.
+- 기존 프레임틀이 정해져있다.
 
 ```html
 <html>

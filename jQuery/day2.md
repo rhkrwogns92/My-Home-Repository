@@ -12,7 +12,6 @@
 - [5.4. 이벤트 처리 적용하기 (traverse.jsp)](#54-이벤트-처리-적용하기-traversejsp)
 - [6. 홈페이지 만들기1 (index.jsp)](#6-홈페이지-만들기1-indexjsp)
 
-
 # 1. traverse
 
 traverse는 `.` 을 찍어서 표현한다. filter는 `:` 을 사용하여 표현.
