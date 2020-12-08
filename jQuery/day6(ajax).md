@@ -2,12 +2,25 @@
 
 - [목차](#목차)
 - [1. Ajax](#1-ajax)
+- [1.1. Ajax(타입)](#11-ajax타입)
+- [2. Ajax를 통해 전체 페이지가 새로고침되게 하지 않으려면,](#2-ajax를-통해-전체-페이지가-새로고침되게-하지-않으려면)
+- [2.1. 서버에서 처리할 내용을 UI에서 분리](#21-서버에서-처리할-내용을-ui에서-분리)
+- [2.2. 서버는 처리된 내용을 화면에 출력하는 로직을 추가한다.](#22-서버는-처리된-내용을-화면에-출력하는-로직을-추가한다)
+- [2.3. UI단에서는 XMLHttpRequest 객체를 사용하여 서버의 처리 결과를 가져온다.](#23-ui단에서는-xmlhttprequest-객체를-사용하여-서버의-처리-결과를-가져온다)
+- [3. Ajax 응용](#3-ajax-응용)
+	- [3.0. Application.java 파일 (control)](#30-applicationjava-파일-control)
+	- [3.1. EmpVo.java 파일 (control)](#31-empvojava-파일-control)
+	- [3.2. EmpDao.java 파일 (control)](#32-empdaojava-파일-control)
+- [4. Ajax(HTML) 타입 맛보기](#4-ajaxhtml-타입-맛보기)
+	- [4.1. emp_search_form.jsp 파일 (UI)](#41-emp_search_formjsp-파일-ui)
+	- [4.2. emp_search.jsp 파일 (UI + Control)](#42-emp_searchjsp-파일-ui--control)
 
 
 # 1. Ajax
 
 Ajax의 특징
 
+- 웹을 앱의 형식으로 바꿀 수 있다.
 - 별도의 외부 플러그인이나 라이브러리, ActiveX와 같은 API 프로그램들이 필요없다.
 - 브라우저내부에 있는 자바스크립트만으로 처리 가능하다.
 - 비동기방식으로 서버와 통신하며, 브라우저의 새로고침 없이 특정 서버(영역)의 내용을 동적으로 변경할 수 있다.
@@ -21,6 +34,22 @@ Ajax의 특징
 - ${param.su}(태그 라이브러리(el))를 사용 함으로써 값 초기화는 해결되지만, 페이지 새로고침은 고칠 수 없다.
 
 이러한 증상은 Ajax를 사용함으로써 해결할 수 있다.(ajax를 통해 전체 페이지가 새로고침되는 현상을 피할 수 있다)
+
+# 1.1. Ajax(타입)
+
+ajax 타입에는 html, xml, json 타입이 있다.
+- json타입을 많이 쓴다.
+- 오래된 문서는 xml 이 많고 최근엔 json을 많이 쓴다.
+
+html
+- 코드는 제일 간단 할 수 있지만, 호환성이 좋지않다 ( 웹에만  한정)
+
+xml
+- 태그형식을 사용함으로써 데이터를 구조화 시키는 것은 장점이나.
+- 데이터의 양보다 태그의 양(태그의용량)이 더 많아지는 단점이 있다.
+
+json
+- 호환성이 좋다.
 
 # 2. Ajax를 통해 전체 페이지가 새로고침되게 하지 않으려면,
 
@@ -291,10 +320,10 @@ jQuery 사용
 
 # 3. Ajax 응용
 
-- %s String
-- %d digit(정수)
-- %c char(문자)
-- %f flot(실수)
+- %s: String
+- %d: digit(정수)
+- %c: char(문자)
+- %f: float,double(실수)
 
 검색어를 입력하여 ename or empno or job에 포함되어 있으면
 empno, ename, job, sal, deptno를 화면에 표시하시오.
@@ -429,8 +458,9 @@ public class EmpDao {
 	}	
 }
 ```
+# 4. Ajax(HTML) 타입 맛보기
 
-## 3.3. emp_search_form.jsp 파일 (UI)
+## 4.1. emp_search_form.jsp 파일 (UI)
 ```HTML
 <html>
 <head>
@@ -466,7 +496,7 @@ $('#btnFind').on('click',function(){
 	req.onreadystatechange = function(){
 		//console.log(req.status+","+req.readyState);
 		if(req.status==200 && req.readyState==4){
-			$('#items').html(req.responseText);			
+			$('#items').html(req.responseText);		// html 형식			
 		}
 	}
 	req.send();
@@ -477,7 +507,7 @@ $('#btnFind').on('click',function(){
 </html>
 ```
 
-## 3.4. emp_search.jsp 파일 (UI + Control)
+## 4.2. emp_search.jsp 파일 (UI + Control)
 
 ```JSP
 <%@page import="ajax.EmpVo"%>
@@ -492,7 +522,8 @@ $('#btnFind').on('click',function(){
 	EmpDao dao = new EmpDao();
 	List<EmpVo> list = dao.search(findStr);
 	StringBuilder sb = new StringBuilder();
-	String fmt = "<div class='emp'>" 
+
+	String fmt = "<div class='emp'>" 		// html 형식
 				+ " <div>사원번호:%d</div>"
 				+ " <div>이름:%s</div>"
 				+ " <div>직업:%s</div>"
