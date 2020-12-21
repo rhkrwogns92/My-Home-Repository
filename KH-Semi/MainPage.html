@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>MainPage</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+    
+    html,body{ 
+        margin:0; padding:0; 
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .container{
+        width: 1900px; height: 100%; margin: 0 auto;
+        box-sizing:border-box;       
+    }
+    
+    header,nav,section,article,aside,footer{ 
+        box-sizing: border-box;
+    }
+    header,footer,section,aside{
+        width: 1900px; 
+    }
+
+    /*--------------------------------------------  상단 헤더 --------------------------------------------*/
+    header{
+        height: 10%; padding:1px;               
+        height: 100px;
+        display: flex;
+        list-style-type: none;
+        position: relative;        
+    }   
+    header a>h2{ 
+        font-family: 'Dancing Script', cursive;
+        color: rgb(219, 46, 46);
+        font-size: 30px;
+        font-weight: bold;        
+        float:left;
+        padding-top: 8px;
+        padding-left: 100px;
+        padding-right: 130px;
+        box-sizing:border-box;        
+    }
+    header nav{ 
+        width:70%; float:right;
+    }
+    header nav>ul>li{ 
+        display: inline-block;
+        padding: 15px; 
+        margin-right:30px;
+        padding-right: 40px;
+        margin-top: 6px;
+    }
+    header div{      
+        position: absolute;
+        left: 1500px;
+        top: -2px;
+        width: 110px;        
+        line-height: 4px;
+        margin: 30px;
+        padding: 20px;        
+        border: 1px solid rgb(107, 101, 101);                      
+        border-radius: 25px;        
+    }
+    header div>li a{
+        text-decoration: none;    
+        color:rgb(107, 101, 101);        
+    }
+    header nav>ul>li a{
+        text-decoration:none;
+        font-size: 1rem;
+    }  
+  
+    /*-------------------------------------------- 중간 섹션 --------------------------------------------*/
+    
+    /*------------------ 첫번째 ------------------*/
+   
+    section>#article1{
+        height: 640px;        
+        border: 1px solid white;
+        background-color: rgb(93, 170, 214);
+        position: relative;
+    }
+    section>#article1>#article1_div1{
+        list-style-type: none;
+        color: white;        
+        float:left;
+        margin: 100px;
+        padding:10px;
+        padding-left: 380px;
+    }
+    section>#article1>#article1_div1>h2{
+        font-size: 55px;
+    }
+    section>#article1>#article1_div1>li{
+        font-size: 20px;
+    }
+    section>#article1>#article1_div1>#testpage{
+        padding-top: 65px;
+        padding-left: 110px;                
+    }
+    section>#article1>#article1_div1>#testpage>li{
+        border: 1px solid black;
+        border-style: none;
+        border-radius: 30px;    
+        background-color: rgb(71, 62, 62); 
+        width: 170px;
+        height: 60px;
+        line-height: 58px;
+    }
+    section>#article1>#article1_div1>#testpage a{
+        padding-left: 20px;        
+        font-size: 22px;
+        color: white;
+        text-decoration:none;
+    }
+    section>#article1>#article1_div2{
+        margin-top: 110px;        
+        position: absolute;
+        left: 1375px;        
+    }   
+    section>#article1>#article1_div3{
+        position: absolute;
+        left: 1000px;
+        top: 100px;
+        z-index: inherit;
+    }
+
+
+    /*------------------ 두번째 ------------------*/
+    #article2>div h2{
+        margin-top: 60px;
+        font-family: 'Dancing Script', cursive;
+        color: rgb(219, 46, 46);
+        font-size: 50px;
+        font-weight: bold;
+    }
+    #article2>div{
+        margin:30px;        
+        height: 670px;
+        text-align: center;
+    }  
+    #article2 #p1{
+        padding-top: 70px;
+    }
+    #article2 #p3,#p4,#p6,#p7{
+        padding-top: 30px;
+    }
+
+    /*------------------ 세번째 ------------------*/
+    #article3{                        
+        display: flex;
+        flex-direction:column;
+    }
+    #article3>#love{   
+        background-color: rgb(216, 233, 238);
+        display: flex;
+        justify-content:space-evenly;
+        width: 1900px;
+        height: 500px;
+    }
+    #article3>#love p{
+        font-size: 15px;
+    }    
+    #article3>#love>#love1>h2>p{
+        padding-top: 40px;
+        font-size: 40px;
+    }
+    #article3>#love>#love1{
+        margin: -40px;      
+        text-align: center;
+        padding-top: 60px;               
+        float:left;
+    }
+    #article3>#love>#love2{        
+        padding-top: 120px;                      
+        text-align: center;
+    }
+    #article3>#together{        
+        display: flex;
+        justify-content:space-evenly;
+        width: 1900px;
+        height: 500px;
+        background-color: rgb(200, 218, 218);
+    }
+    #article3>#together p{        
+        font-size: 15px;
+    }    
+    #article3>#together>#together1>h2>p{
+        padding-top: 20px;
+        font-size: 40px;
+    }        
+    #article3>#together>#together2{                
+        padding-top: 150px;
+        text-align: center;
+    }
+    /*--------------------------------------------  후기글  --------------------------------------------*/
+
+
+
+
+
+
+
+
+
+    
+
+    /*-------------------------------------------- 하단 푸터 --------------------------------------------*/
+   
+    #footer{
+        text-align: center;
+        background-color: #f1f1f1;      
+        line-height: 25px;            
+        height : 440px;
+      
+    }
+    .footer-container ul{
+        list-style-type: none;
+    }
+    .footer-container .footer-sns{
+        margin-right: 30px;
+        display: flex; 
+        justify-content: center;
+    }
+    .footer-container .footer-sns li{
+        position: relative;
+        margin-top: 10px;
+        padding-left: 20px;
+        right: 20px;
+    }
+    .footer-container .footer-link{        
+        right: 40px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-container .footer-link li{
+        padding-left: 35px;
+        justify-content: center;
+    }
+    .footer-container p{
+        padding-left: 5px;
+        position: relative;
+        right:8px
+    }
+    .footer-wrap {
+        font-size: 12px;
+
+    }
+    .footer-container .footer-logo{
+        padding-top: 75px;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: 'Dancing Script', cursive;
+        color:rgb(219, 46, 46);
+        
+    }
+    .footer-container .footer-info {
+        padding-top: 8px;
+        position: relative;
+        right:28px;
+    }
+    .footer-container .copyright{
+        padding-top: 20px;
+    }
+
+
+</style>
+
+</head>
+<!------------------------------------------------------------------------------------- 바디 ------------------------------------------------------------------------------------->
+<body>
+    <div class="container">
+        <!--------------------------------------------  상단 헤더 -------------------------------------------->
+        <header id='header'>
+            <a href="main.jsp"><h2>Meet Your Family</h2></a>
+            <nav>             
+                <ul>                    
+                    <li><a href="main.jsp?inc=./dog_introduce/test1.jsp">사업소개</a></li>
+                    <li><a href="main.jsp?inc=./dog_garden/test2.jsp">마당</a></li>
+                    <li><a href="main.jsp?inc=./dog_test/test3.jsp">who's my family</a></li>
+                    <li><a href="main.jsp?inc=./dog_board/test4.jsp">meet your family</a></li>
+                    <li><a href="main.jsp?inc=./dog_mypage/test5.jsp">마이페이지</a></li>                                                        
+                </ul>                               
+            </nav>       
+            <div>
+                <li><a href="main.jsp?inc=./dog_login/test6.jsp">로그인/회원가입</a></li>                    
+            </div>
+ </header>
+        <!-------------------------------------------- 중간 섹션 -------------------------------------------->
+        <section>
+            <!------------------ 첫번째 ------------------>
+            <article id="article1">
+                <div id="article1_div1">
+                    <h2>저의<br>가족이 되어 주세요</h2>
+                    <li>어떤 강아지와 잘 맞을지 궁금할땐, 견종 매칭테스트</li>
+                    <div id='testpage'>
+                        <li><a href="main.jsp?inc=./dog_test/test3.jsp">검사하러 가기</a></li>
+                    </div>
+                </div>
+                <div id='article1_div2'>
+                    <img src="./img/foot.png"/>
+                </div>             
+                <div id='article1_div3'>
+                    <img width='600px' height='600px' src="./img/dog.png"/>
+                </div>
+            </article>                        
+            <!------------------ 두번째 ------------------>
+            <article id="article2">
+                <div>
+                    <h2>Meet Your Family</h2>
+                    <p id='p1'>오늘날 전 세계적으로 700억여 마리의 동물들이 인간에 의해</p>
+                    <p>태어나고 죽음에 이르고 있습니다.</p>
+                    <p id='p3'>우리가 함께 사는 세상에는 따스한 관심이 필요한 곳이 너무나도 많습니다.</p>
+                    <p id='p4'>반려동물들은 항상 우리를 바라보고 조건없는 따뜻한 사랑을 줍니다.</p>
+                    <p>이제 우리가 먼저 그들에게 다가가는 건 어떨까요?</p>
+                    <h3><p id='p6'>Companion Animal Mind & I</p></h3>
+                    <p id='p7'>반려동물의 마음과 나의 마음을 함께 들여다보세요.</p>
+                    <p>서로를 위한 건강한 반려생활, 이제 meet your family로 시작해보세요.</p>
+                </div>
+            </article>           
+            <!------------------ 세번째 ------------------>
+            <article id="article3">
+                <div id="love">
+                    <div><img src="./img/love.png" width='500px' height='500px'></div>
+                    <div id="love1">
+                        <h2><p>'사랑주기'</p></h2>                       
+                        <p>사랑주기는  후원 서비스입니다.</p>
+                        <p>여러분의 소중한 도움으로</p>
+                        <p>생명을 살릴 수 있습니다.</p>
+                    </div>
+                    <div id="love2">
+                        <p>동물실험으로 생명이 위태로운,</p>
+                        <p>학대로 인해 몸과 마음에 큰 상처를 입은,</p>
+                        <p>사고로 인해 장애를 갖게 되어버린,</p>
+                        <br>
+                        <p>지금 당장 몸과 마음에 치료가 필요한 가엾고</p>
+                        <p>여린 생명들을 위하여 Meet Your Family가 함께합니다.</p>
+                    </div>
+                </div>
+                <div id="together">
+                    <div id="together1">
+                        <h2><p>'함께하기'</p></h2>                     
+                        <p>- 아이들을 위한 최소한의 사랑 책임금 -</p>
+                        <br>                       
+                        <li>책임금은 수익목적재분양, 재유기파양, 생산출산업자입양,<br>식용도용, 재정능력 없는 가정을 필터링 하기 위한 최소한의<br>장치입니다.</li>
+                        <li>책임금은 유기동물 보호 및 케어, 입양장려 캠페인, 유기견방지<br>캠페인 등에 쓰여집니다.</li>
+                        <li>충분한 신뢰를 입증한 재입양 회원은 책임비가 면제될 수<br>있습니다.</li>                   
+                    </div>
+                    <div id="together2">
+                        <p>사랑스러운 당신의 가족을 찾으세요.</p>
+                        <p>힘든 일을 겪었음에도 아이들은 순수한 눈동자와 미소를 잃지</p>
+                        <p>않고 넘치는 정을 나누어줄 새 동반자를 찾고 있습니다.</p>
+                        <p>아이들에게 따뜻한 손길을 내어주세요!</p>
+                    </div>
+                    <div><img src="./img/together.png" width='500px' height='500px'></div>
+                </div>
+            </article>
+        </section> 
+        <!--------------------------------------------  후기글  -------------------------------------------->
+        <aside>
+            <div>
+                <h3>후기</h3>
+                <li>반려인 이야기</li>
+            </div>
+            <div>
+                <img src='http://placehold.it/300x300'/>
+                <img src='http://placehold.it/300x300'/>
+                <img src='http://placehold.it/300x300'/>                
+            </div>
+
+        </aside>
+        <!-------------------------------------------- 하단 푸터 -------------------------------------------->
+        <footer id="footer">
+            <div class="footer-wrap">
+              <div class="footer-container" data-side="false">
+                <div class="footer-logo">MEET YOUR FAMILY</div>
+                <ul class="footer-sns">
+                    <li><a href="https://blog.naver.com/" target="_new"><img src="./img/footer-sns-naver.png"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_new"><img src="./img/footer-sns-instagram.png"></a></li>
+                    <li><a href="https://www.facebook.com/" target="_new"><img src="./img/footer-sns-facebook.png"></a></li>
+                </ul>
+                <ul class="footer-link">
+                  <li><a href="https://google.com/" target="_new">이용약관</a></li>
+                  <li><a href="https://google.com/" target="_new">개인정보취급방침</a></li>
+                  <li><a href="/center/">고객센터</a></li>
+                </ul>
+                <ul class="footer-info">
+                  <li>(주)MYFamily</li>
+                  <li>서울시 영등포구 선유동2로 57 이레빌딩 19층 D사무실</li>
+                  <li>고유번호증: 123-45-677890 | 대표자: 김유찬 | 대표전화: 02-123-4567</li>
+                  <li>팩스: 02-765-4321 | 이메일: myfamily@meetyourfamily.com</li>
+                </ul>
+                <p class="copyright">COPYRIGHT @ MYFAMULY ALL RIGHT RESERVED</p>
+              </div>
+            </div>
+        </footer>
+        <!-- <div class="scroll-top"><button class="scroll-top-btn" type="button" data-state="true"></button></div> -->
+    </div>
+</body>
+</html>
