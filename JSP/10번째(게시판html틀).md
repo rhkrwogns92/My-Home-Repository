@@ -7,7 +7,7 @@
 	- [1.3. BoardDao.java(처음 테스트)](#13-boarddaojava처음-테스트)
 	- [1.4. config.xml 안에 mapper 작성(mapper로 board.xml 참조)](#14-configxml-안에-mapper-작성mapper로-boardxml-참조)
 	- [1.4. sql에 board 테이블 생성](#14-sql에-board-테이블-생성)
-	- [1.5. board.xml 작성 select문 연습! (모든 serial값, 한개의 serial값 각각 선택)](#15-boardxml-작성-select문-연습-모든-serial값-한개의-serial값-각각-선택)
+	- [1.5. board.xml 작성 select문 연습! (모든 serial값 / 한개의 serial값 각각 선택하기)](#15-boardxml-작성-select문-연습-모든-serial값--한개의-serial값-각각-선택하기)
 	- [1.6. BoardDao.java 다시 작성(모든 serial값, 한개의 serial값 각각 출력)](#16-boarddaojava-다시-작성모든-serial값-한개의-serial값-각각-출력)
 	- [1.7. board.xml에 BoardVo 적용시키기](#17-boardxml에-boardvo-적용시키기)
 	- [1.8. BoardDao.java 적용시키기](#18-boarddaojava-적용시키기)
@@ -60,7 +60,7 @@ config.xml
 
 ## 1.2. BoardFactory.java 파일 만들기
 
-- JDBCdptj Connection conn 의 역할을 한다.
+- JDBC에서 Connection conn 의 역할을 한다.
 
 BoardFactory.java
 ```java
@@ -127,6 +127,8 @@ public class BoardDao {
 
 ## 1.4. config.xml 안에 mapper 작성(mapper로 board.xml 참조)
 
+- `<mapper resource="board/board.xml"/>` 추가
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -146,7 +148,7 @@ public class BoardDao {
 	</environments>
 	
 	<mappers>	
-		<mapper resource="board/board.xml"/>		
+		<mapper resource="board/board.xml"/> <!-- 추가 -->
 	</mappers>
 </configuration>
 ```
@@ -195,9 +197,9 @@ insert into board values(seq_board.nextval, 'chu','1111','이건뭐지10','안�
 commit;
 ```
 
-## 1.5. board.xml 작성 select문 연습! (모든 serial값, 한개의 serial값 각각 선택)
+## 1.5. board.xml 작성 select문 연습! (모든 serial값 / 한개의 serial값 각각 선택하기)
   
-- selectList, slectOne 테스트 해보기
+- select는 선택된 값의 수에 따라 selectList(두개이상), slectOne(한개)이 있다. 테스트 해보기
 - 모든 serial만 선택해 반환 해보기
 
 ```xml
@@ -206,8 +208,8 @@ commit;
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 	
-<mapper namespace="board"> <!-- 이 파일 접근 하려면 "board.all_serial" 하면 된다. -->
-	<select id="all_serial" resultType="int"> 
+<mapper namespace="board"> 
+	<select id="all_serial" resultType="int"> <!-- 이 파일 접근 하려면 "board.all_serial" 하면 된다. -->
 		select serial from board <!-- 모든 serial만 선택해 반환함 -->	
 	</select>	
 	
